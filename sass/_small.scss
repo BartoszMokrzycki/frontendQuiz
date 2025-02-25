@@ -1,0 +1,37 @@
+@media (min-width: 576px) {
+	nav {
+		padding: 4em;
+	}
+
+	main {
+		padding: 2em 4em;
+
+		h2 {
+			font-size: 6.4rem;
+			line-height: 80px;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+
+		.subject-container {
+			.subject-box {
+				&__item {
+					&--text {
+						font-size: 2.2rem;
+					}
+				}
+			}
+		}
+
+		.quiz-summary {
+			.summary-text {
+				p {
+					font-size: 6.4rem;
+					padding: 0.3em 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Frontend Quiz App</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/e6248a83de.js"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<nav>
+			<img
+				src="./images/pattern-background-mobile-light.svg"
+				alt=""
+				class="bg-pattern" />
+			<div class="category-panel invisible">
+				<div class="category-img">
+					<img src="/images/icon-html.svg" alt="" />
+				</div>
+				<p class="category-text">HTML</p>
+			</div>
+			<div class="color-panel">
+				<i class="fa-regular fa-sun"></i>
+				<div class="switch-button">
+					<input type="checkbox" id="check" />
+					<label for="check" class="btn"></label>
+				</div>
+				<i class="fa-regular fa-moon"></i>
+			</div>
+		</nav>
+		<main>
+			<div class="welcome-section">
+				<h2>Welcome to the <span class="highlighted">Frontend Quiz!</span></h2>
+				<p><i>Pick a subject to get started.</i></p>
+			</div>
+			<div class="subject-container">
+				<div class="subject-box">
+					<div class="subject-box__item" id="quiz-html">
+						<div class="category-img html-img">
+							<img src="./images/icon-html.svg" alt="html icon" />
+						</div>
+						<p class="subject-box__item--text">HTML</p>
+					</div>
+					<div class="subject-box__item" id="quiz-css">
+						<div class="category-img css-img">
+							<img src="./images/icon-css.svg" alt="css icon" />
+						</div>
+						<p class="subject-box__item--text">CSS</p>
+					</div>
+					<div class="subject-box__item" id="quiz-js">
+						<div class="category-img js-img">
+							<img src="./images/icon-js.svg" alt="javascript icon" />
+						</div>
+						<p class="subject-box__item--text">Javascript</p>
+					</div>
+					<div class="subject-box__item" id="quiz-access">
+						<div class="category-img access-img">
+							<img
+								src="./images/icon-accessibility.svg"
+								alt="accessibiity icon" />
+						</div>
+						<p class="subject-box__item--text">Accessibiity</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="question-section hidden-section">
+				<p class="question-number"><em>Question 1 of 10</em></p>
+				<p class="question-content">
+					Which of these color contrast ratios defines the minimum WCAG 2.1
+					Level AA requirement for normal text?
+				</p>
+				<div class="question-progressbar">
+					<div class="progress"></div>
+				</div>
+			</div>
+			<div class="answers-section hidden-section">
+				<div class="answer-box">
+					<div class="answer-box__item">
+						<div class="flexbox">
+							<p class="answer-box__item--abcd">a</p>
+							<p class="answer-box__item--content">312312</p>
+						</div>
+						<img src="./images/icon-error.svg" alt="" class="hidden" />
+					</div>
+					<div class="answer-box__item">
+						<div class="flexbox">
+							<p class="answer-box__item--abcd">a</p>
+							<p class="answer-box__item--content">312312</p>
+						</div>
+						<img src="./images/icon-error.svg" alt="" class="hidden" />
+					</div>
+					<div class="answer-box__item">
+						<div class="flexbox">
+							<p class="answer-box__item--abcd">a</p>
+							<p class="answer-box__item--content">312312</p>
+						</div>
+						<img src="./images/icon-error.svg" alt="" class="hidden" />
+					</div>
+					<div class="answer-box__item">
+						<div class="flexbox">
+							<p class="answer-box__item--abcd">a</p>
+							<p class="answer-box__item--content">312312</p>
+						</div>
+						<img src="./images/icon-correct.svg" alt="" class="hidden" />
+					</div>
+				</div>
+				<button class="submit-btn">Submit Answer</button>
+				<div class="error-msg hidden">
+					<img src="./images/icon-error.svg" alt="" />
+					<p class="error-msg--content">Please select an answer</p>
+				</div>
+			</div>
+			<div class="quiz-summary hidden-section">
+				<div class="summary-text">
+					<p>Quiz completed <span class="bold-span">You scored ...</span></p>
+				</div>
+				<div class="summary-content">
+					<div class="summary-content__box">
+						<p class="score">8</p>
+						<p class="score-range">out of 10</p>
+					</div>
+					<button class="summary-content__btn">Play Again</button>
+				</div>
+			</div>
+		</main>
+	</body>
+	<script src="./js/main.js"></script>
+</html>
