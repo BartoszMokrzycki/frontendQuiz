@@ -161,17 +161,20 @@ const applyDarkModeToNewElements = () => {
 		'.question-number, .question-content, .category-text, .answer-box__item, .answer-box__item--content'
 	);
 
-	switchColorModeBtn.addEventListener('click', () => {
-		newElements.forEach(el => el.classList.toggle('dark-mode'));
-	});
-
+	// checking if dark-mode is active
 	if (body.classList.contains('dark-mode')) {
 		newElements.forEach(el => el.classList.add('dark-mode'));
 	}
 
-	switchColorModeBtn.addEventListener('click', () => {
-		newElements.forEach(el => el.classList.toggle('dark-mode'));
-	});
+	switchColorModeBtn.removeEventListener('click', toggleDarkModeForNewElements);
+	switchColorModeBtn.addEventListener('click', toggleDarkModeForNewElements);
+};
+
+const toggleDarkModeForNewElements = () => {
+	const newElements = document.querySelectorAll(
+		'.question-number, .question-content, .category-text, .answer-box__item, .answer-box__item--content'
+	);
+	newElements.forEach(el => el.classList.toggle('dark-mode'));
 };
 
 //catergory clicking service
@@ -328,18 +331,10 @@ playAgainBtn.addEventListener('click', () => {
 });
 
 switchColorModeBtn.addEventListener('click', () => {
-	bgPattern.style.transition = 'opacity 0.3s ease-in-out';
-	bgPattern.style.opacity = '0';
-	setTimeout(() => {
-		bgPattern.setAttribute(
-			'src',
-			body.classList.contains('dark-mode')
-				? './images/pattern-background-mobile-dark.svg'
-				: '/images/pattern-background-mobile-light.svg'
-		);
-
-		setTimeout(() => {
-			bgPattern.style.opacity = '1';
-		}, 50);
-	}, 300);
+	bgPattern.setAttribute(
+		'src',
+		body.classList.contains('dark-mode')
+			? './images/pattern-background-mobile-dark.svg'
+			: '/images/pattern-background-mobile-light.svg'
+	);
 });
